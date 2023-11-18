@@ -1,5 +1,7 @@
 import React from 'react';
 import { BsThreeDots } from 'react-icons/bs';
+import { CiHeart, CiBookmark } from 'react-icons/ci';
+import { BsChatDots } from 'react-icons/bs';
 
 interface PostProps {
   id: string;
@@ -31,6 +33,15 @@ export default function Post({
 
       {/* Post Image */}
       <img className="object-cover w-full" src={img} alt={username} />
+
+      {/* Post Button */}
+      <div className="flex justify-between px-4 pt-4">
+        <div className="flex space-x-4">
+          <CiHeart className="btn" />
+          <BsChatDots className="btn" />
+        </div>
+        <CiBookmark className="btn" />
+      </div>
     </div>
   );
 }
