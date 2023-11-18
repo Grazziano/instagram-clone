@@ -1,7 +1,7 @@
 import React from 'react';
-import { BsThreeDots } from 'react-icons/bs';
+import { BsThreeDots, BsChatDots } from 'react-icons/bs';
 import { CiHeart, CiBookmark } from 'react-icons/ci';
-import { BsChatDots } from 'react-icons/bs';
+import { RiEmotionHappyLine } from 'react-icons/ri';
 
 interface PostProps {
   id: string;
@@ -37,11 +37,28 @@ export default function Post({
       {/* Post Button */}
       <div className="flex justify-between px-4 pt-4">
         <div className="flex space-x-4">
-          <CiHeart className="btn" />
-          <BsChatDots className="btn" />
+          <CiHeart className="btn" size={28} />
+          <BsChatDots className="btn" size={28} />
         </div>
-        <CiBookmark className="btn" />
+        <CiBookmark className="btn" size={28} />
       </div>
+
+      {/* Post Comments */}
+      <p className="p-5 truncate">
+        <span className="font-bold mr-2">{username}</span>
+        {caption}
+      </p>
+
+      {/* Post input box */}
+      <form className="flex items-center p-4">
+        <RiEmotionHappyLine size={28} />
+        <input
+          className="border-none flex-1 focus:ring-0"
+          type="text"
+          placeholder="Enter your comment..."
+        />
+        <button className="text-blue-400 font-bold">Post</button>
+      </form>
     </div>
   );
 }
