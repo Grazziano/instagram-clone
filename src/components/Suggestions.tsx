@@ -38,7 +38,7 @@ export default function Suggestions() {
             src={`https://i.pravatar.cc/150?img=${Math.ceil(
               Math.random() * 70
             )}`}
-            alt=""
+            alt={suggestion.jobTitle}
           />
 
           <div className="flex-1 ml-4">
