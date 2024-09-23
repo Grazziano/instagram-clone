@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Instagram Clone
 
-## Getting Started
+Este é um projeto de clone do Instagram desenvolvido com Next.js, Firebase, TailwindCSS e TypeScript. O objetivo é criar interface inspirada no Instagram.
 
-First, run the development server:
+## Tecnologias Utilizadas
+
+- **Next.js**: Framework React para construção de aplicações otimizadas para SEO e com renderização do lado do servidor.
+- **Firebase**: Utilizado para autenticação, armazenamento de dados, e hospedagem.
+- **TailwindCSS**: Framework CSS para estilização rápida e eficiente.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+
+<!-- ## Funcionalidades
+
+- Autenticação com Google (OAuth).
+- Upload de imagens com Firebase Storage.
+- Feed de publicações em tempo real.
+- Curtir e comentar em postagens.
+- Interface responsiva. -->
+
+## Imagem da Aplicação
+
+![Página Principal](./public/screenshots/instagran-clone.png)
+
+## Como Executar o Projeto Localmente
+
+### Pré-requisitos
+
+- Node.js >= 14.x
+- Conta no Firebase com um projeto configurado
+- Conta de desenvolvedor Google para usar o OAuth
+
+### Variáveis de Ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto e adicione as seguintes variáveis de ambiente:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+
+FIREBASE_API_KEY=your_firebase_api_key
+FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+FIREBASE_PROJECT_ID=your_firebase_project_id
+FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+FIREBASE_MESSAGE_SENDER_ID=your_firebase_message_sender_id
+FIREBASE_APP_ID=your_firebase_app_id
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/instagram-clone.git
+   cd instagram-clone
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-## Learn More
+3. Execute o projeto:
+   ```bash
+   npm run dev
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. Abra no navegador: [http://localhost:3000](http://localhost:3000)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Configuração do Firebase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. Acesse o [Firebase Console](https://console.firebase.google.com/).
+2. Crie um novo projeto ou utilize um projeto existente.
+3. No painel do Firebase, habilite a autenticação com Google e configure o Firebase Firestore e Storage.
+4. Atualize as variáveis de ambiente com as informações do Firebase.
 
-## Deploy on Vercel
+## Contribuição
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contribuições são bem-vindas! Se você quiser melhorar este projeto, sinta-se à vontade para enviar um pull request.
